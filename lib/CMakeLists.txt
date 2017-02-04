@@ -60,3 +60,7 @@ endif()
 if(COMPILER_RT_BUILD_XRAY)
   compiler_rt_build_runtime(xray)
 endif()
+
+if (COMPILER_RT_BUILD_SYNC)
+  compiler_rt_build_runtime(sync)
+endif()
