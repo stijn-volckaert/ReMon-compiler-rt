@@ -28,14 +28,11 @@ extern "C" void _ReadWriteBarrier();
 #pragma intrinsic(_ReadWriteBarrier)
 #endif
 
-#ifndef sigaltstack
-struct sigaltstack {
+struct old_sigaltstack {
 	void* ss_sp;
 	int ss_flags;
 	unsigned ss_size;
 };
-#endif
-
 
 namespace __sanitizer {
 struct StackTrace;
